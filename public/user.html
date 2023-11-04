@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+        <title>MoneyX</title>
+        <meta content="" name="description">
+        <meta content="" name="keywords">
+
+        <!-- Favicons -->
+        <link href="img/favicon.png" rel="icon">
+        <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+
+        <!-- Google Fonts -->
+        <link
+            href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Jost:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+            rel="stylesheet">
+
+        <!-- Vendor CSS Files -->
+        <link href="vendor/aos/aos.css" rel="stylesheet">
+        <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link href="vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+        <link href="vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+        <link href="vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+        <link href="vendor/remixicon/remixicon.css" rel="stylesheet">
+        <link href="vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://unpkg.com/buefy/dist/buefy.min.css">
+
+        <!-- Template Main CSS File -->
+        <link href="css/style.css" rel="stylesheet">
+
+
+        <style>
+            main.container {
+                max-width: 640px !important;
+                text-align: center;
+            }
+
+        </style>
+    </head>
+
+    <body>
+
+        <!-- ======= Header ======= -->
+        <header id="header" class="fixed-top header-inner-pages">
+            <div class="container d-flex align-items-center">
+
+                <h1 class="logo me-auto"><a href="/">MoneyX</a></h1>
+                <!-- Uncomment below if you prefer to use an image logo -->
+                <!-- <a href="/" class="logo me-auto"><img src="img/logo.png" alt="" class="img-fluid"></a>-->
+
+                <nav id="navbar" class="navbar">
+                    <ul>
+                        <li><a class="nav-link scrollto" target="_blank"
+                                href="https://recomsebi.streamlit.app/">Investment Recommendation</a></li>
+                        <li><a class="nav-link scrollto" target="_blank"
+                                href="https://stockpredsebi.streamlit.app/">Stock Prediction</a></li>
+                        <li><a class="nav-link scrollto" href="/app">Account Overview</a></li>
+                        <li><a class="getstarted scrollto" href="/chat">Add New Record</a></li>
+                    </ul>
+                    <i class="bi bi-list mobile-nav-toggle"></i>
+                </nav><!-- .navbar -->
+
+            </div>
+        </header><!-- End Header -->
+
+        <main id="main">
+
+            <!-- ======= Breadcrumbs ======= -->
+            <section id="breadcrumbs" class="breadcrumbs">
+                <div class="container">
+
+                    <ol>
+                        <li><a href="/">Home</a></li>
+                        <li>User Profile</li>
+                    </ol>
+                    <h2>User Profile</h2>
+
+                </div>
+            </section><!-- End Breadcrumbs -->
+
+            <section class="inner-page">
+                <main id="user" class="section container">
+                    <p class="h2">User Profile</p>
+                    <div class="row d-flex justify-content-center align-items-center h-100">
+                        <div class="col col-lg-10 mb-4 mb-lg-0">
+                            <div class="card mb-3" style="border-radius: .5rem;">
+                                <div class="row g-0">
+                                    <div class="col-md-4 gradient-custom text-center"
+                                        style="border-top-left-radius: .5rem; border-bottom-left-radius: .5rem;">
+                                        <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava1-bg.webp"
+                                            alt="Avatar" class="img-fluid my-5" style="width: 80px;" />
+                                        <h5>{{user.res.user.name}}</h5>
+                                        <p><b>@</b>{{user.res.user.username}}</p>
+                                        <i class="far fa-edit mb-5"></i>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="card-body p-4">
+                                            <h6>Information</h6>
+                                            <hr class="mt-0 mb-4">
+                                            <div class="row pt-1">
+                                                <h6>Email</h6>
+                                                <p class="text-muted">{{user.res.user.email}}</p>
+                                            </div>
+                                            <h6>Account Overview</h6>
+                                            <hr class="mt-0 mb-4">
+                                            <div class="row pt-1">
+                                                <div class="col-6 mb-3">
+                                                    <h6>Income</h6>
+                                                    <p class="text-muted">{{user.res.user.Income}}</p>
+                                                </div>
+                                                <div class="col-6 mb-3">
+                                                    <h6>Expenses</h6>
+                                                    <p class="text-muted">{{user.res.user.Expenses}}</p>
+                                                </div>
+                                                <div class="col-6 mb-3">
+                                                    <h6>Investments</h6>
+                                                    <p class="text-muted">{{user.res.user.Investments}}</p>
+                                                </div>
+                                                <div class="col-6 mb-3">
+                                                    <h6>Savings</h6>
+                                                    <p class="text-muted">{{user.res.user.Savings}}</p>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex justify-content-center">
+                                                <b-button type="is-primary" @click="/history">Transaction</b-button>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </section>
+
+        </main><!-- End #main -->
+
+        <!-- ======= Footer ======= -->
+        <footer id="footer">
+            <div class="container footer-bottom clearfix">
+                <div class="copyright">
+                    &copy; Copyright <span>MoneyX</span>. All Rights Reserved
+                </div>
+
+            </div>
+        </footer><!-- End Footer -->
+
+        <div id="preloader"></div>
+        <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+                class="bi bi-arrow-up-short"></i></a>
+
+        <!-- Vendor JS Files -->
+        <script src="vendor/aos/aos.js"></script>
+        <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="vendor/glightbox/js/glightbox.min.js"></script>
+        <script src="vendor/isotope-layout/isotope.pkgd.min.js"></script>
+        <script src="vendor/swiper/swiper-bundle.min.js"></script>
+        <script src="vendor/waypoints/noframework.waypoints.js"></script>
+        <script src="vendor/php-email-form/validate.js"></script>
+        <script src="https://unpkg.com/vue@2"></script>
+        <script src="https://unpkg.com/buefy/dist/buefy.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js"
+            integrity="sha512-uMtXmF28A2Ab/JJO2t/vYhlaa/3ahUOgj1Zf27M5rOo8/+fcTUVH0/E0ll68njmjrLqOBjXM3V9NiPFL5ywWPQ=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://unpkg.com/vue-router@3.5.2/dist/vue-router.js"></script>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <!-- Template Main JS File -->
+        <script src="js/main.js"></script>
+        <script type="module" src="js/user.js"></script>
+
+    </body>
+
+</html>
