@@ -1,0 +1,54 @@
+{
+  "name": "MoneyManagerX",
+  "version": "1.0.0",
+  "description": "Finance tracker application that incorporates multifactor authentication with FIDO2, categorizes transactions in expense, savings, investment, or earning, and allows users to make investments",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rishitashaw/MoneyManagerX.git"
+  },
+  "keywords": [
+    "FIDO2",
+    "Finance",
+    "Tracker",
+    "Budget"
+  ],
+  "author": "Rishita Shaw",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rishitashaw/MoneyManagerX/issues"
+  },
+  "homepage": "https://github.com/rishitashaw/MoneyManagerX#readme",
+  "dependencies": {
+    "@passwordless-id/webauthn": "^1.2.4",
+    "axios": "^1.4.0",
+    "bcryptjs": "^2.4.3",
+    "colors": "^1.4.0",
+    "cookie-parser": "^1.4.6",
+    "cookie-session": "^2.0.0",
+    "cors": "^2.8.5",
+    "crypto": "^1.0.1",
+    "dotenv": "^16.1.4",
+    "express": "^4.18.2",
+    "express-async-handler": "^1.2.0",
+    "fido2-lib": "^3.4.0",
+    "fido2-server": "^0.5.0",
+    "helmet": "^7.0.0",
+    "mongoose": "^7.2.2",
+    "nodemailer": "^6.9.3",
+    "nodemon": "^2.0.22",
+    "openai": "^3.2.1",
+    "webauthn": "^0.2.0",
+    "ws": "^8.13.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.21.5",
+    "@babel/node": "^7.22.1",
+    "@babel/preset-env": "^7.22.4"
+  }
+}
