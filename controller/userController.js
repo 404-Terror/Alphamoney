@@ -75,14 +75,14 @@ const getBudgetingDetails = asyncHandler(async (req, res) => {
   const { credentialId } = req.body;
   try {
     const user = await User.findOne({ credentialKeys: credentialId });
-    const transactions = await Transaction.find({type: "Expenses", user:user._id});
+    const transactions = await Transaction.find({ type: "Expenses", user: user._id });
     const rent = transactions.filter((transaction) => transaction.statement.includes("rent")).reduce((a, b) => a + b.amount, 0);
     const shopping = transactions.filter((transaction) => transaction.statement.includes("shopping")).reduce((a, b) => a + b.amount, 0);
     const food = transactions.filter((transaction) => transaction.statement.includes("food")).reduce((a, b) => a + b.amount, 0);
     const miscellaneous = transactions.filter((transaction) => transaction.statement.includes("miscellaneous")).reduce((a, b) => a + b.amount, 0);
     const emi = transactions.filter((transaction) => transaction.statement.includes("emi")).reduce((a, b) => a + b.amount, 0);
     // console.log(transactions)
-    res.json({rent, shopping, food, miscellaneous, emi, user});
+    res.json({ rent, shopping, food, miscellaneous, emi, user });
   } catch (error) {
     console.error('Error fetching data:', error);
     res.status(500).json({ error: 'Internal server error' });

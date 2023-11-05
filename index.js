@@ -57,6 +57,9 @@ app.get('/user2', isAuthenticated, function (req, res) {
 app.get('/app', isAuthenticated, function (req, res) {
     res.sendFile(join(publicDirPath, 'dataviz.html'));
 });
+app.get('/genie', function (req, res) {
+    res.sendFile(join(publicDirPath, 'Chatbot.html'));
+});
 
 app.get('/chat', isAuthenticated, function (req, res) {
     res.sendFile(join(publicDirPath, 'chat.html'));
