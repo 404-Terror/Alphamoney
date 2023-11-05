@@ -51,7 +51,9 @@ app.get('/auth', function (req, res) {
 app.get('/user', isAuthenticated, function (req, res) {
     res.sendFile(join(publicDirPath, 'user.html'));
 });
-
+app.get('/user2', isAuthenticated, function (req, res) {
+    res.sendFile(join(publicDirPath, 'user2.html'));
+});
 app.get('/app', isAuthenticated, function (req, res) {
     res.sendFile(join(publicDirPath, 'dataviz.html'));
 });
