@@ -62,7 +62,7 @@ const getChallenge = (req, res) => {
 const getTransaction = asyncHandler(async (req, res) => {
   const user = req.query.user; // Get the user ID from the query parameter
   try {
-    const transactions = await Transaction.find().limit(10);
+    const transactions = await Transaction.find().sort({ _id: -1 }).limit(10);
     // console.log(transactions)
     res.json(transactions);
   } catch (error) {
