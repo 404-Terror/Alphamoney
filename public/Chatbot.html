@@ -3,6 +3,8 @@
 <head>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />	
+	<link href="img/favicon.png" rel="icon">
+    <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
 	<title>Money Genie</title>
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
@@ -160,7 +162,7 @@ function clearContent(){
 }
 
 const url = new URL(window.location.href);
-const key = "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";
+const key = "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";
 const chatbox = $("#chatbox");
 const userInput = $("#userInput");
 const sendButton = $("#sendButton");
@@ -205,7 +207,7 @@ userInput.on("keydown", (event) => {
 });
 
 function fetchMessages() {
-	const apiKey = "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";
+	const apiKey = "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";
         var settings = {
             url: "https://api.openai.com/v1/chat/completions",
             method: "POST",
